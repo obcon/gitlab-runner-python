@@ -14,10 +14,10 @@ RUN apt-get update -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN echo "deb https://packages.gitlab.com/runner/gitlab-ci-multi-runner/ubuntu/ zesty main" > /etc/apt/sources.list.d/runner_gitlab-ci-multi-runner.list && \
+RUN echo "deb https://packages.gitlab.com/runner/gitlab-runner/ubuntu/ zesty main" > /etc/apt/sources.list.d/runner_gitlab-runner.list && \
     wget -q -O - https://packages.gitlab.com/gpg.key | apt-key add - && \
     apt-get update -y && \
-    apt-get install -y gitlab-ci-multi-runner=1.11.5 && \
+    apt-get install -y gitlab-runner && \
     apt-get clean && \
     mkdir -p /etc/gitlab-runner/certs && \
     chmod -R 700 /etc/gitlab-runner && \
