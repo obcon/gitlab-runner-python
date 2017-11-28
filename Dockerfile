@@ -10,7 +10,7 @@ RUN chmod +x /usr/bin/dumb-init
 
 RUN apt-get update -y && \
     apt-get upgrade -y && \
-    apt-get install -y ca-certificates wget apt-transport-https vim nano curl tar zip unzip && \
+    apt-get install -y ca-certificates wget apt-transport-https vim nano curl tar zip unzip make && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
