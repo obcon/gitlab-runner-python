@@ -33,7 +33,7 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN pip install awscli ansible
+RUN pip install awscli ansible pipenv
 
 RUN mkdir /opt/terraform && \
     cd /opt/terraform && \
