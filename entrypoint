@@ -18,5 +18,7 @@ if [ -f "${CA_CERTIFICATES_PATH}" ]; then
   cmp --silent "${CA_CERTIFICATES_PATH}" "${LOCAL_CA_PATH}" || update_ca
 fi
 
+nohup dockerd & > /var/log/docker.log 2>&1
+
 # launch gitlab-ci-multi-runner passing all arguments
 exec gitlab-runner "$@"

@@ -43,7 +43,7 @@ RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 RUN apt-key fingerprint 0EBFCD88
 RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu zesty stable"
 RUN apt-get update && \
-    apt-get install docker-ce
+    apt-get install -y docker-ce
 
 #
 # PYTHON 3.6
@@ -51,13 +51,13 @@ RUN apt-get update && \
 
 RUN apt-get update && \
     apt-get install -y python3.6 python3.6-venv python3.6-dev && \
-    ln -s /usr/bin/python3.6 /usr/bin/python3 && \
-    ln -s /usr/bin/python3.6 /usr/bin/python && \
     wget https://bootstrap.pypa.io/get-pip.py && \
+    ln -s /usr/bin/python3 /usr/bin/python && \
     python get-pip.py && \
     rm get-pip.py && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
+
 
 #
 # PYTHON PIPs
