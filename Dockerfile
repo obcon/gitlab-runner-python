@@ -70,9 +70,11 @@ RUN pip install awscli ansible pipenv docker-compose
 # TERRAFORM
 #
 
+
+
 RUN mkdir /opt/terraform && \
     cd /opt/terraform && \
-    wget https://releases.hashicorp.com/terrafor6/0.11.3/terraform_0.11.6_linux_amd64.zip && \
+    wget https://releases.hashicorp.com/terraform/0.11.6/terraform_0.11.6_linux_amd64.zip && \
     unzip terraform_0.11.6_linux_amd64.zip && \
     ln -s /opt/terraform/terraform /usr/local/bin/ && \
     rm terraform_0.11.6_linux_amd64.zip
