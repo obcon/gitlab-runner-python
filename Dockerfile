@@ -18,7 +18,7 @@ RUN chmod +x /usr/bin/dumb-init
 
 RUN apt-get update -y && \
     apt-get upgrade -y && \
-    apt-get install -y ca-certificates wget apt-transport-https software-properties-common vim rsync nano curl tar zip unzip make build-essential && \
+    apt-get install -y ca-certificates wget apt-transport-https software-properties-common vim rsync nano curl tar zip unzip make build-essential language-pack-en-base && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
