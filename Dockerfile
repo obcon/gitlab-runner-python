@@ -74,10 +74,10 @@ RUN pip install awscli ansible pipenv docker-compose
 
 RUN mkdir /opt/terraform && \
     cd /opt/terraform && \
-    wget https://releases.hashicorp.com/terraform/0.11.6/terraform_0.11.6_linux_amd64.zip && \
-    unzip terraform_0.11.6_linux_amd64.zip && \
+    wget https://releases.hashicorp.com/terraform/0.11.8/terraform_0.11.8_linux_amd64.zip && \
+    unzip terraform_0.11.8_linux_amd64.zip && \
     ln -s /opt/terraform/terraform /usr/local/bin/ && \
-    rm terraform_0.11.6_linux_amd64.zip
+    rm terraform_0.11.8_linux_amd64.zip
 
 #
 # PACKER
@@ -85,10 +85,10 @@ RUN mkdir /opt/terraform && \
 
 RUN mkdir /opt/packer && \
     cd /opt/packer && \
-    wget https://releases.hashicorp.com/packer/1.1.3/packer_1.1.3_linux_amd64.zip && \
-    unzip packer_1.1.3_linux_amd64.zip && \
+    wget https://releases.hashicorp.com/packer/1.3.1/packer_1.3.1_linux_amd64.zip && \
+    unzip packer_1.3.1_linux_amd64.zip && \
     ln -s /opt/packer/packer /usr/local/bin/ && \
-    rm packer_1.1.3_linux_amd64.zip
+    rm packer_1.3.1_linux_amd64.zip
 
 #
 # ENTRYPOINT
